@@ -2,6 +2,8 @@
  * Created by srujangopu on 2/27/16.
  */
 import {Component} from 'angular2/core';
+import {Inject} from "angular2/core";
+import {Http} from "angular2/http";
 
 @Component({
     selector: 'first',
@@ -9,12 +11,14 @@ import {Component} from 'angular2/core';
 })
 export class First{
 
-    i=0
-    studentName = this.i
+    constructor(@Inject(Http) public http:Http){}
+
+
+    studentName = ""
 
     show(){
-        this.i++;
-        this.studentName = this.i
+       this.http.get("http://demo0180966.mockable.io/getSample")
+        .subscribe(res => this.studentName = res.json().msg)
     }
 
 }
