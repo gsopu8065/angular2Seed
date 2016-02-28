@@ -9,4 +9,12 @@ import {Component} from 'angular2/core';
 })
 export class First{
 
+    i=0
+    studentName = this.i
+
+    show(){
+        this.i++;
+        this.studentName = this.i
+    }
+
 }
