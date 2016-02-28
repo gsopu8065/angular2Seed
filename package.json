@@ -1,0 +1,9 @@
+{
+  "name": "angular2seed",
+  "version": "0.0.1",
+  "dependencies":{
+    "systemjs": "^0.19.20",
+    "typescript": "^1.6.2",
+    "angular2": "2.0.0-beta.7"
+  }
+}
