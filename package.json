@@ -5,5 +5,19 @@
     "systemjs": "^0.19.20",
     "typescript": "^1.6.2",
     "angular2": "2.0.0-beta.7"
+  },
+  "devDependencies":{
+    "jasmine-core": "2.4.1",
+    "karma": "0.13.19",
+    "karma-chrome-launcher": "0.2.2",
+    "karma-coverage": "0.5.3",
+    "karma-jasmine": "0.3.6",
+    "remap-istanbul": "0.5.1"
+  },
+  "scripts":{
+    "start": "http-server -c-1 -o -p 5555 .",
+    "build": "rm -rf dist && tsc -p app",
+    "test": "karma start karma.conf.js",
+    "coverage": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html && http-server -c-1 -o -p 9875 ./coverage"
   }
 }
