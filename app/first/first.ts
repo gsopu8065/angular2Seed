@@ -1,13 +1,10 @@
-/**
- * Created by srujangopu on 2/27/16.
- */
-import {Component} from 'angular2/core';
-import {Inject} from "angular2/core";
+import {Component} from "angular2/core";
 import {Http} from "angular2/http";
+import {Inject} from "angular2/core";
 
 @Component({
     selector: 'first',
-    templateUrl: './first/first.html'
+    templateUrl: './app/first/first.html'
 })
 export class First{
 
